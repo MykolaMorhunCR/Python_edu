@@ -1,7 +1,6 @@
 import unittest
 import Lucky
 
-
 class TestArr(unittest.TestCase):
 
     def test_lucky(self):
@@ -13,3 +12,4 @@ class TestArr(unittest.TestCase):
             Lucky.lucky(0)
             Lucky.lucky(-100)
             Lucky.lucky(7)
+            Lucky.lucky(7777777777777777777777772)

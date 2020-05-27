@@ -11,10 +11,10 @@ def date(day, month, year):
         isValidDate = False
 
     if isValidDate:
-        print ("Yes")
+        print("Yes")
     else:
-        print ("No")
+        print("No")
 
 
-date(10, 12, "two")
+date(10, 12, 2322332)
 date(31, 11, 2000)

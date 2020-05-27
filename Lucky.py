@@ -1,10 +1,15 @@
+import sys
+
+
 def lucky(num):
     if type(num) is not int:
         raise ValueError("Only integers allowed")
     elif num % 2 != 0:
-        raise ValueError("Ticket number can't be odd")
+        raise ValueError("Lucky ticket number should be even")
     elif num <= 0:
         raise ValueError("Ticket number can't be 0 and less")
+    elif num >= sys.maxsize:
+        raise ValueError("Max value reached")
 
     else:
         # Because magic
@@ -15,5 +20,3 @@ def lucky(num):
         sum_of_lucky = sum([x ** 2 for x in array])
 
         return sum_of_lucky
-
-
