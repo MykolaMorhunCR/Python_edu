@@ -24,10 +24,11 @@ def Bounds(main_array, n=0):
     return close_to_mean
 
 
-def maximum(test_array):
-    sorted_array = np.unique(np.sort(test_array))
+def maximum(main_array):
+    sorted_array = np.unique(np.sort(main_array))
     reverse_sorted_array = sorted_array[::-1]
-    print(reverse_sorted_array[0], reverse_sorted_array[1])
+    maximum_values = [reverse_sorted_array[0], reverse_sorted_array[1]]
+    return maximum_values
 
 
 find_mean(input_array)
