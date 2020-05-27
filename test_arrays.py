@@ -6,8 +6,12 @@ import numpy as np
 class TestArr(unittest.TestCase):
 
     def setUp(self):
-        main_array = np.random.randint(-1000, high=1000, size=1000)
+
         return main_array
 
+    def tearDown(self):
+        """Hook method for deconstructing the test fixture after testing it."""
+        pass
+
     def test_max(self):
-        self.assertNotEqual(Tasks23.maximum(self.main_array).maximum_values[0], Tasks23.maximum().maximum_values[1])
+        self.assertNotEqual(maximum_values[0], Tasks23.maximum(main_array).maximum_values[1])
