@@ -1,6 +1,7 @@
 import unittest
 import Lucky
 
+
 class TestArr(unittest.TestCase):
 
     def test_lucky(self):

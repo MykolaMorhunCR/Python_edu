@@ -3,7 +3,7 @@ import sys
 
 def lucky(num):
     if type(num) is not int:
-        raise ValueError("Only integers allowed")
+        raise TypeError("Only integers allowed")
     elif num % 2 != 0:
         raise ValueError("Lucky ticket number should be even")
     elif num <= 0:
@@ -18,5 +18,8 @@ def lucky(num):
         for i in range(num // 2 - 1):
             array = [sum(array[:x + 1]) if x < 10 else sum(array[x - 9:x + 1]) for x in range(len(array))]
         sum_of_lucky = sum([x ** 2 for x in array])
-
+        print(sum_of_lucky)
         return sum_of_lucky
+
+
+lucky(6)
