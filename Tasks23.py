@@ -27,8 +27,9 @@ def Bounds(main_array, n=0):
 def maximum(main_array):
     sorted_array = np.unique(np.sort(main_array))
     reverse_sorted_array = sorted_array[::-1]
-    maximum_values = [reverse_sorted_array[0], reverse_sorted_array[1]]
-    return maximum_values
+    max1 = reverse_sorted_array[0]
+    max2 = reverse_sorted_array[1]
+    return max1, max2
 
 
 find_mean(input_array)
