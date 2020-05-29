@@ -22,4 +22,10 @@ def lucky(num):
         return sum_of_lucky
 
 
-lucky(6)
+#lucky(6)
+#try:
+    #lucky(-10)
+#except ValueError:
+    #print("Ticket number can't be 0 and less")
+#else:
+    #pass
