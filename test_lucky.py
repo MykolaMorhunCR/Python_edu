@@ -6,7 +6,7 @@ class TestArr(unittest.TestCase):
     def test_lucky(self):
         self.assertEqual(Lucky.lucky(6), 55252)
         self.assertEqual(Lucky.lucky(4), 670)
-
+        print("1231312")
         with self.assertRaises(ValueError):
             Lucky.lucky("string")
             Lucky.lucky(0)
