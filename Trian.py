@@ -51,7 +51,7 @@ class Triangle:
             return "Разносторонний"
 
 
-tr1 = Triangle(3, 4, 5)
-tr1.compute_perimeter()
-tr1.compute_area()
-tr1.type()
+#tr1 = Triangle(3, 4, 5)
+#tr1.compute_perimeter()
+#tr1.compute_area()
+#tr1.type()

@@ -15,3 +15,4 @@ class TestArr(unittest.TestCase):
             Lucky.lucky(7777777777777777777777772)
         with self.assertRaises(TypeError):
             Lucky.lucky("string")
+            Lucky.lucky(5.5)
