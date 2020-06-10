@@ -1,8 +1,13 @@
+import unittest
+
+
 class Triangle:
-    def __init__(self, a=3, b=4, c=5):
+    def __init__(self, a, b, c):
         self.a = a
         self.b = b
         self.c = c
+
+        ## Couldn't find way to test raised exceptions in constructor
 
         if not type(a) is int:
             raise TypeError("Only integers allowed")
@@ -40,18 +45,31 @@ class Triangle:
 
         elif (self.a == self.b and self.a != self.c) or (self.a == self.c and self.a != self.b) or (
                 self.c == self.b and self.a != self.c):
-            return "равнобедренный"
+            return "isosceles"
 
         elif self.a == self.b and self.a == self.c:
-            print("равносторонний")
-            return "равносторонний"
+            return "equilateral"
 
         elif self.a != self.b and self.a != self.c:
-            print("Разносторонний")
-            return "Разносторонний"
+            return "miscellaneous"
 
 
-#tr1 = Triangle(3, 4, 5)
-#tr1.compute_perimeter()
-#tr1.compute_area()
-#tr1.type()
+# tr1 = Triangle(3, 4, 5)
+# tr1.compute_perimeter()
+# tr1.compute_area()
+# tr1.type()
+
+
+
+# class TriangleNegative(unittest.TestCase):
+#
+#     @classmethod
+#     def setUpClass(cls):
+#         print("123123123")
+#         cls.impossible = Triangle("ter", 4, 5)
+#         return cls.impossible
+#
+#     def test_raise(self):
+#         print("123123")
+#         with self.assertRaises(ValueError):
+#             self.impossible.__init__()

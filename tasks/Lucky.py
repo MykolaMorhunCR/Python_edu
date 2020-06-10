@@ -22,7 +22,7 @@ def lucky(num):
         return sum_of_lucky
 
 
-#lucky(6)
+
 #try:
     #lucky(-10)
 #except ValueError:
