@@ -8,7 +8,7 @@ class Arrays:
 
     def find_mean(self):
         mean = np.mean(self.main_array)
-        print(mean)
+        # print(mean)
         return mean
 
     def Bounds(self, n=0):
@@ -22,7 +22,7 @@ class Arrays:
                 n += 1
 
         close_to_mean = list(filter(None, new_array))
-        print(close_to_mean)
+        # print(close_to_mean)
         return close_to_mean
 
     def maximum(self):
