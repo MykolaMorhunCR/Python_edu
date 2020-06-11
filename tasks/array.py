@@ -36,6 +36,6 @@ class Arrays:
         return max1, max2
 
 
-# Array = Arrays(np.arange(0, 1000))
+# Array = Arrays(np.random.randint(-1000, high = 1000, size = 1000))
 # Array.find_mean()
 # Array.Bounds()
