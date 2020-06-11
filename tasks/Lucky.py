@@ -26,12 +26,13 @@ def lucky(num):
             # перехода от Массива для единичных билетов к дву- трех- значным используем такой подход: Если
             # предположить что номер билета начинается с числа j То Суммма номеров билета является k-j,
             # где j принимает значения 0..9 и не превышает k. Соответственно количество номеров сумм выражается
-            # формулой N(k-j), где j = 0..9.
+            # формулой N(k-j), где j = 0..9
             array = [sum(array[:x + 1]) if x < 10 else sum(array[x - 9:x + 1]) for x in range(len(array))]
             # Суммируем квадраты количеств сумм (Комбинаторика) и получаем количество счастливых билетов
         sum_of_lucky = sum([x ** 2 for x in array])
         print(sum_of_lucky)
         return sum_of_lucky
+
 
 # try:
 # lucky(-10)
@@ -39,3 +40,32 @@ def lucky(num):
 # print("Ticket number can't be 0 and less")
 # else:
 # pass
+
+
+# Просто для проверки грубым перебором
+
+# i = 0
+# h = 0
+# j = 0
+# k = 0
+# f = 0
+# p = 0
+# count = 0
+# arr = [0, 0, 0, 0, 0, 0]
+#
+# for i in range(0, 10):
+#     arr[0] = i
+#     for h in range(0, 10):
+#         arr[1] = h
+#         for j in range(0, 10):
+#             arr[2] = j
+#             for k in range(0, 10):
+#                 arr[3] = k
+#                 for f in range(0, 10):
+#                     arr[4] = f
+#                     for p in range(0, 10):
+#                         arr[5] = p
+#                         if int(arr[0])+int(arr[1])+int(arr[2]) == int(arr[3])+int(arr[4])+int(arr[5]):
+#                             count += 1
+#
+# print(count)

@@ -1,9 +1,12 @@
 import datetime
 
 
-def date(day, month, year):
+def check_my_date(day, month, year):
     isValidDate = True
-
+    # BC_Flag = False
+    # if year < 0:
+    #     year = abs(year)
+    #     BC_Flag = True
     try:
         datetime.datetime(int(year), int(month), int(day))
 
@@ -11,10 +14,14 @@ def date(day, month, year):
         isValidDate = False
 
     if isValidDate:
-        print("Yes")
+        return True
     else:
-        print("No")
+        return False
 
 
-date(10, 12, 2322332)
-date(30, 11, 2000)
+# if check_my_date(10, 12, 1):
+#     print('1')
+# else:
+#     print('0')
+#
+
