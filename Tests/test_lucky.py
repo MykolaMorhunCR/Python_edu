@@ -2,7 +2,7 @@ import unittest
 from tasks import Lucky
 
 
-class TestArr(unittest.TestCase):
+class TestLucky(unittest.TestCase):
 
     def test_lucky(self):
         self.assertEqual(Lucky.lucky(6), 55252)
